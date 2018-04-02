@@ -10,12 +10,16 @@ namespace Assignment1
 {
     public class CourseManager
     {
+        public const string FailToSaveData = "Fail to save the data.";
+        public const string FailToOpenTheFile = "Fail to open the file.";
         private Course[] courses;
         private int numberOfCourses;
+        private int maxCourses;
 
         public CourseManager()
         {
-            this.courses = new Course[100];
+            maxCourses = 100;
+            this.courses = new Course[maxCourses];
         }
 
         public Course[] Courses
@@ -160,10 +164,26 @@ namespace Assignment1
         {
             int i = 0;
             BinaryFormatter binFormat = new BinaryFormatter();
-            FileStream fileIn = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            courses = (Course[])binFormat.Deserialize(fileIn);
+            FileStream fileIn = null;
+            try
+            {
+                fileIn = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+                courses = (Course[])binFormat.Deserialize(fileIn);
 
-            while(courses[i] != null)
+            }
+            catch (IOException)
+            {
+                throw new Exception("Fail to open the file.");
+            }
+            finally
+            {
+                if (fileIn != null)
+                {
+                    fileIn.Close();
+                }
+            }
+
+            while (courses[i] != null)
             {
                 i++;
             }

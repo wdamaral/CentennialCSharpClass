@@ -9,6 +9,7 @@ namespace Assignment1
     [Serializable]
     public class Evaluation
     {
+        public const string TypeValidNumber = "Type a valid number.";
         private EvaluationType typeOfEvaluation;
         private double evaluationWeight;
         private int maxPoints;
@@ -34,7 +35,15 @@ namespace Assignment1
             get { return evaluationWeight; }
             set
             {
-                evaluationWeight = value;
+                if (value <= 0)
+                {
+                    throw new Exception("Type a valid number.");
+                }
+                else
+                {
+                    evaluationWeight = value;
+                }
+
             }
         }
 
@@ -43,14 +52,30 @@ namespace Assignment1
             get { return maxPoints; }
             set
             {
-                maxPoints = value;
+                if(value <= 0 )
+                {
+                    throw new Exception("Type a valid number.");
+                }
+                else
+                {
+                    maxPoints = value;
+                }
             }
         }
 
         public int Points
         {
             get { return points; }
-            set { points = value; }
+            set {
+                    if (value < 0)
+                    {
+                        throw new Exception("Type a valid number.");
+                    }
+                    else
+                    {
+                        points = value;
+                    }
+            }
         }
 
         public string GetInfo()

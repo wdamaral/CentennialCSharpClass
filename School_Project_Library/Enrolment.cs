@@ -20,8 +20,8 @@ namespace Assignment1
         {
             Section = section;
             Student = student;
-            this.noOfEvaluations = numberOfCourseEvaluations;
-            this.evaluations = new Evaluation[numberOfCourseEvaluations];
+            NoOfEvaluations = numberOfCourseEvaluations;
+            Evaluations = new Evaluation[numberOfCourseEvaluations];
 
             AddDefaultEvaluations();
             
@@ -48,11 +48,14 @@ namespace Assignment1
         public int NoOfEvaluations
         {
             get { return noOfEvaluations; }
+            private set { noOfEvaluations = value; }
+
         }
 
         public Evaluation[] Evaluations
         {
             get { return evaluations; }
+            private set { evaluations = value; }
         }
 
         public void CalculateFinalGrade()

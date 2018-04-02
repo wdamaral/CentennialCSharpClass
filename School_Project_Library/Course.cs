@@ -9,22 +9,31 @@ namespace Assignment1
     [Serializable]
     public class Course
     {
+        public const string SectionIsNotValidMessage = "Section is not valid.";
+        public const string SectionAlreadyAssignedMessage = "Section is already assigned";
         private string courseCode;
         private string name;
         private string description;
         private int noOfEvaluations;
         private int numberOfSections;
         private Section[] sections;
+        private int maxNumberOfSections;
 
         public Course()
         {
-            this.sections = new Section[20];
+            maxNumberOfSections = 20;
+            this.sections = new Section[this.maxNumberOfSections];
         }
 
         public Course(string courseCode, string name) : this()
         {
             this.courseCode = courseCode;
             this.name = name;
+        }
+
+        public int MaxNumberOfSections
+        {
+            get { return maxNumberOfSections; }
         }
 
         public string CourseCode
@@ -103,7 +112,7 @@ namespace Assignment1
                 }
                 else
                 {
-                    throw new Exception("Section already assigned to " + section.Course.Name + " course");
+                    throw new Exception("Section is already assigned to " + section.Course.Name + " course");
                 }
             }
         }

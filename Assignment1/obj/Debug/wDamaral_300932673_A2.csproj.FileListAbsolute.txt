@@ -6,3 +6,13 @@ C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\Assignment1\obj\Debug\wDamaral_300932673_A2.csproj.CoreCompileInputs.cache
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\Assignment1\obj\Debug\School.exe
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\Assignment1\obj\Debug\School.pdb
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\bin\Debug\School.exe.config
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\bin\Debug\School.exe
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\bin\Debug\School.pdb
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\bin\Debug\School_Project_Library.dll
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\bin\Debug\School_Project_Library.pdb
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\obj\Debug\wDamaral_300932673_A2.csprojResolveAssemblyReference.cache
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\obj\Debug\wDamaral_300932673_A2.csproj.CoreCompileInputs.cache
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\obj\Debug\School.exe
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\obj\Debug\School.pdb
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment1\obj\Debug\wDamaral_300932673_A2.csproj.CopyComplete

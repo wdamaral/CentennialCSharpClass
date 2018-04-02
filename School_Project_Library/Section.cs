@@ -9,6 +9,11 @@ namespace Assignment1
     [Serializable]
     public class Section
     {
+        public const string SectionNotAssignedToCourse = "Student can only be assigned to the section that is assigned to the course";
+        public const string SectionIsFull = "Student cannot be added. The section is full.";
+        public const string NoOfEvaluationsIsZero = "The number of evaluations is 0";
+        public const string StudentIsNotInSection = "is not in the section";
+        public const string PointsHigherThanMaxPoints = "Points are more than the max number of points for the evaluation";
         private string sectionId;
         private string name;
         private int maxNoOfEnrolments;
@@ -23,7 +28,7 @@ namespace Assignment1
         public Section()
         {
             MaxNumberOfStudents = 40;
-            this.enrolments = new Enrolment[MaxNumberOfStudents];
+            Enrolments = new Enrolment[MaxNumberOfStudents];
         }
 
         public Section(Course course, int maxNoOfStudents, SemesterPeriod semester)
@@ -31,7 +36,7 @@ namespace Assignment1
             MaxNumberOfStudents = maxNoOfStudents;
             Semester = semester;
             Course = course;
-            this.enrolments = new Enrolment[MaxNumberOfStudents];
+            Enrolments = new Enrolment[MaxNumberOfStudents];
         }
 
         public Section(Course course, SemesterPeriod semester) : this()
@@ -67,21 +72,28 @@ namespace Assignment1
         public int MaxNumberOfStudents
         {
             get { return maxNoOfEnrolments; }
-            set {
-                    try
-                    {
-                        maxNoOfEnrolments = value;
-                    }
-                    catch (Exception ex)
-                    {
-                        throw ex;
-                    }
-                 }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("Type a valid number.");
+                }
+                else
+                {
+                    maxNoOfEnrolments = value;
+                }
+            }
         }
 
         public int NumberOfEnrolments
         {
             get { return noOfEnrolments; }
+        }
+
+        public Enrolment[] Enrolments
+        {
+            get { return enrolments; }
+            private set { enrolments = value; }
         }
 
         public Course Course
@@ -116,11 +128,16 @@ namespace Assignment1
 
         public void DefineEvaluation(int evaluationOrderNo, EvaluationType evaluationType, int maxPoints, double evaluationWeight)
         {
-            for (int i = 0; i < noOfEnrolments; i++)
+            if(enrolments[0].NoOfEvaluations != 0) { 
+                for (int i = 0; i < noOfEnrolments; i++)
+                {
+                    enrolments[i].Evaluations[evaluationOrderNo - 1].TypeOfEvaluation = evaluationType;
+                    enrolments[i].Evaluations[evaluationOrderNo - 1].MaxPoints = maxPoints;
+                    enrolments[i].Evaluations[evaluationOrderNo - 1].EvaluationWeight = evaluationWeight;
+                }
+            } else
             {
-                enrolments[i].Evaluations[evaluationOrderNo - 1].TypeOfEvaluation = evaluationType;
-                enrolments[i].Evaluations[evaluationOrderNo - 1].MaxPoints = maxPoints;
-                enrolments[i].Evaluations[evaluationOrderNo - 1].EvaluationWeight = evaluationWeight;
+                throw new Exception("The number of evaluations is 0. It is not possible to add a new one.");
             }
         }
 
