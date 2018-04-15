@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Assignment1
 {
     [Serializable]
-    public class Person
+    public abstract class Person
     {
         readonly long registrationNo;
         private string name;
@@ -56,7 +56,7 @@ namespace Assignment1
             get { return registrationNo; }
         }
 
-        public string GetInfo()
+        public override string ToString()
         {
             return String.Format("Reg no: {0}, Name: {1}, DOB: {2:yyyy/MM/dd},\n" +
                                     "Address: Street: {3}, City: {4}, Province: {5}, Tel: {6}", 

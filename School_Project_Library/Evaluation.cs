@@ -78,7 +78,7 @@ namespace Assignment1
             }
         }
 
-        public string GetInfo()
+        public override string ToString()
         {
             return String.Format("Evaluation: {0}, Weight: {1}, Maximum points: {2}, Points: {3}.",
                                     TypeOfEvaluation, EvaluationWeight, MaxPoints, Points);

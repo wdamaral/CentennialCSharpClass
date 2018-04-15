@@ -1,2 +1,2 @@
 COMP100|Programming 1|Programming1 description|3
-COMP123|Programming2|prog 2 desc|2
+COMP123|Programming2|prog 2 desc|3

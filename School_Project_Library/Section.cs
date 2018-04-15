@@ -19,8 +19,9 @@ namespace Assignment1
         private int maxNoOfEnrolments;
         private int noOfEnrolments;
         private SemesterPeriod semester;
-        private Person faculty;
-        private Enrolment[] enrolments;
+        private Teacher faculty;
+        //private Enrolment[] enrolments;
+        private List<Enrolment> enrolments;
         private Course course;
 
 
@@ -28,15 +29,16 @@ namespace Assignment1
         public Section()
         {
             MaxNumberOfStudents = 40;
-            Enrolments = new Enrolment[MaxNumberOfStudents];
+            //Enrolments = new Enrolment[MaxNumberOfStudents]();
+            Enrolments = new List<Enrolment>();
         }
 
-        public Section(Course course, int maxNoOfStudents, SemesterPeriod semester)
+        public Section(Course course, int maxNoOfStudents, SemesterPeriod semester) : this()
         {
             MaxNumberOfStudents = maxNoOfStudents;
             Semester = semester;
             Course = course;
-            Enrolments = new Enrolment[MaxNumberOfStudents];
+            //Enrolments = new Enrolment[MaxNumberOfStudents]();
         }
 
         public Section(Course course, SemesterPeriod semester) : this()
@@ -63,10 +65,14 @@ namespace Assignment1
             set { semester = value; }
         }
 
-        public Person Faculty
+        public Teacher Faculty
         {
             get { return faculty; }
-            set { faculty = value; }
+            set
+            {
+                faculty = value;
+                faculty.Sections.Add(this);
+            }
         }
 
         public int MaxNumberOfStudents
@@ -90,7 +96,8 @@ namespace Assignment1
             get { return noOfEnrolments; }
         }
 
-        public Enrolment[] Enrolments
+        //public Enrolment[] Enrolments
+        public List<Enrolment> Enrolments
         {
             get { return enrolments; }
             private set { enrolments = value; }
@@ -102,7 +109,7 @@ namespace Assignment1
             set { course = value; }
         }
 
-        public void AddStudent(Person student)
+        public void AddStudent(Student student)
         {
             Enrolment enrolment;
             try
@@ -116,8 +123,11 @@ namespace Assignment1
 
             if (MaxNumberOfStudents > noOfEnrolments)
             {
-                this.enrolments[this.noOfEnrolments++] = enrolment;
+                //this.enrolments[this.noOfEnrolments++] = enrolment;
+                Enrolments.Add(enrolment);
+                noOfEnrolments++;
                 enrolment.Section = this;
+                student.Sections.Add(this);
             }
             else
             {
@@ -128,20 +138,22 @@ namespace Assignment1
 
         public void DefineEvaluation(int evaluationOrderNo, EvaluationType evaluationType, int maxPoints, double evaluationWeight)
         {
-            if(enrolments[0].NoOfEvaluations != 0) { 
+            if (enrolments[0].NoOfEvaluations != 0)
+            {
                 for (int i = 0; i < noOfEnrolments; i++)
                 {
                     enrolments[i].Evaluations[evaluationOrderNo - 1].TypeOfEvaluation = evaluationType;
                     enrolments[i].Evaluations[evaluationOrderNo - 1].MaxPoints = maxPoints;
                     enrolments[i].Evaluations[evaluationOrderNo - 1].EvaluationWeight = evaluationWeight;
                 }
-            } else
+            }
+            else
             {
                 throw new Exception("The number of evaluations is 0. It is not possible to add a new one.");
             }
         }
 
-        public void AddStudentMark(int evaluationOrderNo, Person student, int points)
+        public void AddStudentMark(int evaluationOrderNo, Student student, int points)
         {
             bool registered = false;
             int maxPoints = 0;
@@ -169,7 +181,7 @@ namespace Assignment1
             }
         }
 
-        public string GetInfo()
+        public override string ToString()
         {
             string info;
 

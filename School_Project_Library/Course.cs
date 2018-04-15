@@ -16,19 +16,21 @@ namespace Assignment1
         private string description;
         private int noOfEvaluations;
         private int numberOfSections;
-        private Section[] sections;
+        //private Section[] sections;
+        private List<Section> sections;
         private int maxNumberOfSections;
 
         public Course()
         {
             maxNumberOfSections = 20;
-            this.sections = new Section[this.maxNumberOfSections];
+            //this.sections = new Section[maxNumberOfSections]();
+            Sections = new List<Section>();
         }
 
         public Course(string courseCode, string name) : this()
         {
-            this.courseCode = courseCode;
-            this.name = name;
+            CourseCode = courseCode;
+            Name = name;
         }
 
         public int MaxNumberOfSections
@@ -80,9 +82,11 @@ namespace Assignment1
             get { return numberOfSections; }
         }
 
-        public Section[] Sections
+        //public Section[] Sections
+        public List<Section> Sections
         {
             get { return sections; }
+            private set { sections = value; }
         }
 
         public void AddSection(SemesterPeriod semester, string sectionId, string sectionName)
@@ -93,7 +97,9 @@ namespace Assignment1
                 SectionId = sectionId,
                 MaxNumberOfStudents = 30
             };
-            this.sections[numberOfSections++] = section;
+            //Sections[numberOfSections++] = section;
+            Sections.Add(section);
+            numberOfSections++;
             section.Course = this;
         }
 
@@ -107,7 +113,9 @@ namespace Assignment1
             {
                 if(section.Course == null)
                 {
-                    this.sections[numberOfSections++] = section;
+                    //this.sections[numberOfSections++] = section;
+                    Sections.Add(section);
+                    numberOfSections++;
                     section.Course = this;
                 }
                 else
@@ -117,7 +125,7 @@ namespace Assignment1
             }
         }
 
-        public string GetInfo()
+        public override string ToString()
         {
             string info;
             info = string.Format("Course Code: {0}, Name: {1}, Description: {2}, No of Evaluations: {3}.\n" +

@@ -9,25 +9,26 @@ namespace Assignment1
     [Serializable]
     public class Enrolment
     {
-        private Person student;
+        private Student student;
         private Section section;
         private Grade finalGrade;
         private int noOfEvaluations;
-        private Evaluation[] evaluations;
-        
+        //private Evaluation[] evaluations;
+        private List<Evaluation> evaluations;
 
-        public Enrolment(Section section, Person student, int numberOfCourseEvaluations)
+        public Enrolment(Section section, Student student, int numberOfCourseEvaluations)
         {
             Section = section;
             Student = student;
             NoOfEvaluations = numberOfCourseEvaluations;
-            Evaluations = new Evaluation[numberOfCourseEvaluations];
+            //Evaluations = new Evaluation[numberOfCourseEvaluations];
+            Evaluations = new List<Evaluation>();
 
             AddDefaultEvaluations();
             
         }
 
-        public Person Student
+        public Student Student
         {
             get { return student; }
             set { student = value; }
@@ -52,7 +53,8 @@ namespace Assignment1
 
         }
 
-        public Evaluation[] Evaluations
+        //public Evaluation[] Evaluations
+        public List<Evaluation> Evaluations
         {
             get { return evaluations; }
             private set { evaluations = value; }
@@ -83,14 +85,15 @@ namespace Assignment1
         {
             for (int i = 0; i < NoOfEvaluations; i++)
             {
-                evaluations[i] = new Evaluation();
+                //evaluations[i] = new Evaluation();
+                evaluations.Add(new Evaluation());
             }
         }
 
-        public string GetInfo()
-        {
-            return String.Format("Student: {0}, \nSection: {1} \nFinal Grade: {2}",
-                                Student.GetInfo(), Section.GetInfo(), FinalGrade);
-        }
+        //public string GetInfo()
+        //{
+        //    return String.Format("Student: {0}, \nSection: {1} \nFinal Grade: {2}",
+        //                        Student.GetInfo(), Section.GetInfo(), FinalGrade);
+        //}
     }
 }
