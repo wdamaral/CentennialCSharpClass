@@ -12,17 +12,17 @@ namespace Assignment1
     {
         public const string FailToSaveData = "Fail to save the data.";
         public const string FailToOpenTheFile = "Fail to open the file.";
-        private Course[] courses;
+        private List<Course> courses;
         private int numberOfCourses;
         private int maxCourses;
 
         public CourseManager()
         {
-            maxCourses = 100;
-            this.courses = new Course[maxCourses];
+            //maxCourses = 100;
+            this.courses = new List<Course>();
         }
 
-        public Course[] Courses
+        public List<Course> Courses
         {
             get { return courses; }
         }
@@ -34,7 +34,8 @@ namespace Assignment1
 
         public void AddCourse(Course course)
         {
-            this.courses[numberOfCourses++] = course;
+            this.courses.Add(course);
+            numberOfCourses++;
         }
 
         public void ExportCourses(string fileName, char delimiter)
@@ -162,13 +163,12 @@ namespace Assignment1
 
         public void LoadSchool(string fileName)
         {
-            int i = 0;
             BinaryFormatter binFormat = new BinaryFormatter();
             FileStream fileIn = null;
             try
             {
                 fileIn = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-                courses = (Course[])binFormat.Deserialize(fileIn);
+                courses = (List<Course>)binFormat.Deserialize(fileIn);
 
             }
             catch (IOException)
@@ -183,11 +183,7 @@ namespace Assignment1
                 }
             }
 
-            while (courses[i] != null)
-            {
-                i++;
-            }
-            this.numberOfCourses = i;
+            this.numberOfCourses = courses.Count;
             fileIn.Close();
         }
     }
