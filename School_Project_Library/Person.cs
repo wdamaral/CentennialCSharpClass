@@ -13,7 +13,7 @@ namespace Assignment1
         private string name;
         private DateTime dOB;
         private Address address;
-        private uint telephoneNo;
+        private double telephoneNo;
 
         private static long nextNumber;
 
@@ -45,7 +45,7 @@ namespace Assignment1
             set { address = value; }
         }
 
-        public uint TelephoneNumber
+        public double TelephoneNumber
         {
             get { return telephoneNo; }
             set { telephoneNo = value; }

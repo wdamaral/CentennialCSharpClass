@@ -11,6 +11,6 @@ C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Test\obj\Debug\School_Project_Test.csprojResolveAssemblyReference.cache
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Test\obj\Debug\School_Project_Test.csproj.CoreCompileInputs.cache
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Test\obj\Debug\School_Project_Test.csproj.CopyComplete
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Test\obj\Debug\School_Project_Test.dll
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Test\obj\Debug\School_Project_Test.pdb
-C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Test\obj\Debug\School_Project_Test.csproj.CopyComplete

@@ -1,0 +1,16 @@
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\bin\Debug\Assignment4.exe.config
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\bin\Debug\Assignment4.exe
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\bin\Debug\Assignment4.pdb
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\bin\Debug\School_Project_Library.dll
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\bin\Debug\School_Project_Library.pdb
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.csprojResolveAssemblyReference.cache
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.Properties.Resources.resources
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.csproj.GenerateResource.cache
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.csproj.CoreCompileInputs.cache
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.csproj.CopyComplete
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.exe
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.pdb
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.FormAddCourse.resources
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.FormMain.resources
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.FormAddSection.resources
+C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\Assignment4\obj\Debug\Assignment4.FormAddPerson.resources

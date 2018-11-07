@@ -8,4 +8,3 @@ C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Library\obj\Debug\School_Project_Library.csproj.CoreCompileInputs.cache
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Library\obj\Debug\School_Project_Library.dll
 C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Library\obj\Debug\School_Project_Library.pdb
-C:\Users\Wagner D'Amaral\Documents\College\COMP123\Projects\wDamaral_300932673_A2A\CentennialCSharpClass\School_Project_Library\obj\Debug\School_Project_Library.csprojResolveAssemblyReference.cache
